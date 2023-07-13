@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
-
+import ClassCombo from "./Handsonone/ClassCombo";
+import FuncCombo from "./Handsonone/FuncCombo"; 
 function App() {
+  const[fState , setFState]=useState(false);
+  const[cState, setCState]=useState(false);
+  console.log(fState);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h1 class="heading1"> Styling using Functional and Class Component</h1>
+   
+    <button onClick={()=>setFState(!fState)} class="btn1"> To See Styling is Function Component</button>
+    <button onClick={()=>setCState(!cState)} class="btn2" > To See Styling is Class Component</button>
+    { fState ? <FuncCombo/>:""}
+    { fState && <FuncCombo/>}
+    { cState ? <ClassCombo/>:""}
+    { cState && <ClassCombo/>}
+   
+    </>
   );
 }
 
