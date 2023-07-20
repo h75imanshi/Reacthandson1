@@ -1,8 +1,9 @@
 body
 {
-    background-repeat: no-repeat;
-    background:linear-gradient( rgb(109, 211, 245) ,rgb(252, 167, 181));
+    height: 625px;
+    background: linear-gradient(lightblue,lightpink,white);
 }
+
 .heading1
 {
     text-align: center;
